@@ -12,9 +12,9 @@ import PageCart from "components/pages/PageCart/PageCart";
 import PageOrders from "components/pages/PageOrders/PageOrders";
 import PageOrder from "components/pages/PageOrder/PageOrder";
 import PageProductImport from "components/pages/admin/PageProductImport/PageProductImport";
+import PageLogin from "../pages/admin/PageLogin/PageLogin";
 
 function App() {
-
   return (
     <Router>
       <Switch>
@@ -25,6 +25,9 @@ function App() {
             </Route>
             <Route exact path={["/admin/product-form/:id", '/admin/product-form']}>
               <PageProductForm/>
+            </Route>
+            <Route exact path="/admin">
+              <PageLogin />
             </Route>
             <Route exact path="/cart">
               <PageCart />
